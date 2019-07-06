@@ -10,7 +10,14 @@
 
 var rule = require("../../../lib/rules/sort-import-specifiers"),
 
-    RuleTester = require("eslint").RuleTester;
+RuleTester = require("eslint").RuleTester;
+
+RuleTester.setDefaultConfig({
+    parserOptions: {
+        ecmaVersion: 6,
+        sourceType: "module"
+    }
+});
 
 
 //------------------------------------------------------------------------------
@@ -21,17 +28,16 @@ var ruleTester = new RuleTester();
 ruleTester.run("sort-import-specifiers", rule, {
 
     valid: [
-
-        // give me some code that won't trigger a warning
+        "import {a, b, c} from './'"
     ],
 
     invalid: [
         {
-            code: "WIP",
+            code: "import {b, c, a} from './'",
             errors: [{
-                message: "Fill me in.",
-                type: "Me too"
-            }]
+                message: 'Not correct sort import specifiers',
+                type: 'ImportDeclaration'
+              }]
         }
     ]
 });
