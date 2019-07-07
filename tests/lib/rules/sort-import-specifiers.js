@@ -35,7 +35,7 @@ ruleTester.run('sort-import-specifiers', rule, {
     {
       code: "import {b, c, a} from './'",
       errors: [{
-        message: 'Not correct sort import specifiers',
+        message: 'Invalid sort import specifiers',
         type: 'ImportDeclaration',
       }],
       output: "import {a, b, c} from './'",
