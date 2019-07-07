@@ -10,8 +10,9 @@
   "author": "Alexander Ivankov",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive",
-    "test:watch": "mocha tests --recursive --watch"
+    "test": "nyc --reporter=text mocha tests --recursive",
+    "test:watch": "mocha tests --recursive --watch",
+    "test:coverage": "mocha tests --recursive --help"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
@@ -21,7 +22,8 @@
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "nyc": "^14.1.1"
   },
   "engines": {
     "node": ">=0.10.0"

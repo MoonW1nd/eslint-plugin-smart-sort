@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 const { RuleTester } = require('eslint');
-const rule = require('../../../lib/rules/sort-import-specifiers');
+const rule = require('../../../lib/rules/sort');
 
 
 RuleTester.setDefaultConfig({
@@ -77,6 +77,14 @@ ruleTester.run('sort-import-specifiers', rule, {
         type: 'ImportDeclaration',
       }],
       output: 'import t, {  A  ,  B  ,  a2  ,  a10  ,  b  } from \'../\';',
+    },
+    {
+      code: 'import t, { b as d, B, a2, a10, A } from \'../\';',
+      errors: [{
+        message: 'Invalid sort import specifiers',
+        type: 'ImportDeclaration',
+      }],
+      output: 'import t, { A, B, a2, a10, b as d } from \'../\';',
     },
     {
       code: `
