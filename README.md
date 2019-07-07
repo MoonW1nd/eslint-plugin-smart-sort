@@ -1,6 +1,6 @@
 # eslint-plugin-sort-import-specifiers
 
-WIP
+Simple plugin implement sort import specifiers by natural sort oder ([wiki](https://en.wikipedia.org/wiki/Natural_sort_order)), with autofix and without format code style.
 
 ## Installation
 
@@ -43,7 +43,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
+* [sort](./docs/rules/sort.md)
 
 
 
