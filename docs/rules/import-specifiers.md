@@ -42,7 +42,7 @@ Examples of **correct** code for this rule:
 ```json
 {
     "rules": {
-        "sort-import-specifiers/sort": 2
+        "smart-sort/import-specifiers": 2
     }
 }
 ```

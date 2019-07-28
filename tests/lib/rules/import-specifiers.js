@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 const { RuleTester } = require('eslint');
-const rule = require('../../../lib/rules/sort');
+const rule = require('../../../lib/rules/import-specifiers');
 
 
 RuleTester.setDefaultConfig({

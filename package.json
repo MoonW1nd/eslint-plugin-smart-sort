@@ -1,7 +1,7 @@
 {
-  "name": "eslint-plugin-sort-import-specifiers",
+  "name": "eslint-plugin-smart-sort",
   "version": "0.0.0",
-  "description": "WIP",
+  "description": "Plugin ESlint help sort code entities",
   "keywords": [
     "eslint",
     "eslintplugin",

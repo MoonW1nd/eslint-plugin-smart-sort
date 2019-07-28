@@ -1,6 +1,6 @@
-# eslint-plugin-sort-import-specifiers
+# eslint-plugin-smart-sort
 
-Simple plugin implement sort import specifiers by natural sort oder ([wiki](https://en.wikipedia.org/wiki/Natural_sort_order)), with autofix and without format code style.
+Plugin ESlint help sort code entities, with autofix and without format code style.
 
 ## Installation
 
@@ -10,22 +10,22 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-sort-import-specifiers`:
+Next, install `eslint-plugin-smart-sort`:
 
 ```
-$ npm install eslint-plugin-sort-import-specifiers --save-dev
+$ npm install eslint-plugin-smart-sort --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-sort-import-specifiers` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-smart-sort` globally.
 
 ## Usage
 
-Add `sort-import-specifiers` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `smart-sort` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
     "plugins": [
-        "sort-import-specifiers"
+        "smart-sort"
     ]
 }
 ```
@@ -36,14 +36,14 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "sort-import-specifiers/rule-name": 2
+        "smart-sort/rule-name": 2
     }
 }
 ```
 
 ## Supported Rules
 
-* [sort](./docs/rules/sort.md)
+* [import-specifiers](./docs/rules/import-specifiers.md)
 
 
 
