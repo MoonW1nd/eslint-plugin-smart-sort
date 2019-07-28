@@ -21,7 +21,8 @@
     "test": "mocha tests --recursive",
     "test:watch": "mocha tests --recursive --watch",
     "test:coverage": "nyc --reporter=text mocha tests --recursive",
-    "cm": "git-cz"
+    "cm": "git-cz",
+    "release": "standard-version"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
@@ -39,7 +40,8 @@
     "jsonlint": "^1.6.3",
     "lint-staged": "^9.2.1",
     "mocha": "^6.2.0",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "standard-version": "^6.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
