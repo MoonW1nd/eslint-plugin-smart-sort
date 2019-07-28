@@ -7,26 +7,49 @@
     "eslintplugin",
     "eslint-plugin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonW1nd/eslint-plugin-smart-sort.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MoonW1nd/eslint-plugin-smart-sort/issues"
+  },
+  "homepage": "https://github.com/MoonW1nd/eslint-plugin-smart-sort#readme",
   "author": "Alexander Ivankov",
   "main": "lib/index.js",
   "scripts": {
-    "test": "nyc --reporter=text mocha tests --recursive",
+    "test": "mocha tests --recursive",
     "test:watch": "mocha tests --recursive --watch",
-    "test:coverage": "mocha tests --recursive --help"
+    "test:coverage": "nyc --reporter=text mocha tests --recursive",
+    "cm": "git-cz",
+    "release": "standard-version"
   },
   "dependencies": {
-    "requireindex": "~1.1.0"
+    "requireindex": "1.1.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.0",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1"
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.1",
+    "eslint-config-airbnb-base": "13.2.0",
+    "eslint-plugin-import": "2.18.0",
+    "husky": "3.0.1",
+    "jsonlint": "1.6.3",
+    "lint-staged": "9.2.1",
+    "mocha": "6.2.0",
+    "nyc": "14.1.1",
+    "standard-version": "6.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "license": "ISC"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "license": "MIT"
 }
