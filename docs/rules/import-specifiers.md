@@ -1,4 +1,4 @@
-# sort
+# import-specifiers
 
 Sort import specifiers by natural sort oder ([wiki](https://en.wikipedia.org/wiki/Natural_sort_order));
 
