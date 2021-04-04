@@ -110,5 +110,29 @@ ruleTester.run('sort-import-specifiers', rule, {
       } from '../';
       `,
     },
+    {
+      code: `
+      import t, {
+        b as big,
+        B as long,
+        a2 as dlog,
+        a10 as very,
+        A as Alt,
+      } from '../';
+      `,
+      errors: [{
+        message: 'Invalid sort import specifiers',
+        type: 'ImportDeclaration',
+      }],
+      output: `
+      import t, {
+        A as Alt,
+        B as long,
+        a2 as dlog,
+        a10 as very,
+        b as big,
+      } from '../';
+      `,
+    },
   ],
 });
